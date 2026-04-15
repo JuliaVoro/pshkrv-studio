@@ -13,7 +13,8 @@ const VIDEO_MAX = 300 * 1024 * 1024  // 300 MB
 export async function POST(req: NextRequest) {
   try {
     // Check if token is set
-    if (!process.env.pshkrv_READ_WRITE_TOKEN) {
+    const token = process.env.pshkrv_READ_WRITE_TOKEN
+    if (!token) {
       console.error('pshkrv_READ_WRITE_TOKEN not set')
       return NextResponse.json({ error: 'Server configuration error: Blob token missing' }, { status: 500 })
     }
@@ -41,6 +42,7 @@ export async function POST(req: NextRequest) {
     try {
       const blob = await put(filename, file, {
         access: 'public',
+        token: token,
       })
 
       return NextResponse.json({ path: blob.url })
