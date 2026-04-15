@@ -1,6 +1,9 @@
 import { put } from '@vercel/blob'
 import { NextRequest, NextResponse } from 'next/server'
 
+export const runtime = 'nodejs'
+export const maxDuration = 30
+
 const IMAGE_TYPES = new Set(['image/jpeg', 'image/png', 'image/webp', 'image/avif'])
 const VIDEO_TYPES = new Set(['video/mp4', 'video/webm', 'video/ogg', 'video/quicktime'])
 
@@ -40,12 +43,12 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       )
     }
 
-    if (!request.body) {
+    const bodyBuffer = await request.arrayBuffer()
+    if (!bodyBuffer || bodyBuffer.byteLength === 0) {
       return NextResponse.json({ error: 'Empty request body' }, { status: 400 })
     }
 
-    // Stream directly to Vercel Blob — avoids loading entire file into memory
-    const blob = await put(filename, request.body, {
+    const blob = await put(filename, bodyBuffer, {
       access: 'public',
       contentType: mimeType || undefined,
     })
