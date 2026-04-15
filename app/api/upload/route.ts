@@ -12,13 +12,6 @@ const VIDEO_MAX = 300 * 1024 * 1024  // 300 MB
 
 export async function POST(req: NextRequest) {
   try {
-    // Check if token is set
-    const token = process.env.pshkrv_READ_WRITE_TOKEN
-    if (!token) {
-      console.error('pshkrv_READ_WRITE_TOKEN not set')
-      return NextResponse.json({ error: 'Server configuration error: Blob token missing' }, { status: 500 })
-    }
-
     const formData = await req.formData()
     const file = formData.get('file') as File | null
 
@@ -27,33 +20,43 @@ export async function POST(req: NextRequest) {
     }
 
     if (!ALLOWED_TYPES.includes(file.type)) {
-      return NextResponse.json({ error: 'Invalid file type. Allowed: jpg, png, webp, avif, mp4, webm.' }, { status: 400 })
+      return NextResponse.json(
+        { error: 'Invalid file type. Allowed: jpg, png, webp, avif, mp4, webm.' },
+        { status: 400 }
+      )
     }
 
     const isVideo = VIDEO_TYPES.includes(file.type)
     const maxSize = isVideo ? VIDEO_MAX : IMAGE_MAX
     if (file.size > maxSize) {
-      return NextResponse.json({ error: `File too large (max ${isVideo ? '300' : '10'}MB)` }, { status: 400 })
+      return NextResponse.json(
+        { error: `File too large (max ${isVideo ? '300' : '10'} MB)` },
+        { status: 400 }
+      )
     }
 
-    const ext = extname(file.name) || '.jpg'
+    const ext = extname(file.name) || (isVideo ? '.mp4' : '.jpg')
     const filename = `${randomUUID()}${ext}`
 
-    try {
-      const blob = await put(filename, file, {
-        access: 'public',
-        token: token,
-      })
+    // @vercel/blob automatically reads BLOB_READ_WRITE_TOKEN from the environment.
+    // We also support the legacy custom name pshkrv_READ_WRITE_TOKEN as a fallback.
+    const token =
+      process.env.BLOB_READ_WRITE_TOKEN ??
+      process.env.pshkrv_READ_WRITE_TOKEN
 
-      return NextResponse.json({ path: blob.url })
-    } catch (blobError) {
-      const errorMessage = blobError instanceof Error ? blobError.message : 'Unknown error'
-      console.error('Blob upload error:', errorMessage)
-      return NextResponse.json({ error: `Blob upload failed: ${errorMessage}` }, { status: 500 })
+    if (!token) {
+      console.error('No Blob token found. Set BLOB_READ_WRITE_TOKEN in Vercel environment variables.')
+      return NextResponse.json(
+        { error: 'Server configuration error: Blob storage token not configured.' },
+        { status: 500 }
+      )
     }
+
+    const blob = await put(filename, file, { access: 'public', token })
+    return NextResponse.json({ path: blob.url })
   } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-    console.error('Upload error:', errorMessage)
-    return NextResponse.json({ error: `Upload failed: ${errorMessage}` }, { status: 500 })
+    const msg = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Upload error:', msg)
+    return NextResponse.json({ error: `Upload failed: ${msg}` }, { status: 500 })
   }
 }

@@ -6,16 +6,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: '*.blob.vercel-storage.com',
       },
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+      },
     ],
     localPatterns: [
       { pathname: '/uploads/**' },
     ],
-  },
-  api: {
-    bodyParser: {
-      sizeLimit: '100mb',
-    },
-    responseLimit: '100mb',
   },
   experimental: {
     serverComponentsExternalPackages: ['bcryptjs'],
