@@ -44,12 +44,14 @@ export async function POST(req: NextRequest) {
       })
 
       return NextResponse.json({ path: blob.url })
-    } catch (blobError: any) {
-      console.error('Blob upload error:', blobError)
-      return NextResponse.json({ error: `Blob upload failed: ${blobError.message}` }, { status: 500 })
+    } catch (blobError) {
+      const errorMessage = blobError instanceof Error ? blobError.message : 'Unknown error'
+      console.error('Blob upload error:', errorMessage)
+      return NextResponse.json({ error: `Blob upload failed: ${errorMessage}` }, { status: 500 })
     }
-  } catch (error: any) {
-    console.error('Upload error:', error)
-    return NextResponse.json({ error: `Upload failed: ${error.message}` }, { status: 500 })
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Upload error:', errorMessage)
+    return NextResponse.json({ error: `Upload failed: ${errorMessage}` }, { status: 500 })
   }
 }
