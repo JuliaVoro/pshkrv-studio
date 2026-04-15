@@ -242,9 +242,10 @@ function VideoEditor({ block, onChange }: { block: ProjectBlock; onChange: (b: P
   const handleVideoFile = async (file: File) => {
     setUploading(true)
     setUploadError(null)
-    const fd = new FormData()
-    fd.append('file', file)
-    const res = await fetch('/api/upload', { method: 'POST', body: fd })
+    const res = await fetch(`/api/upload?filename=${encodeURIComponent(file.name)}`, {
+      method: 'POST',
+      body: file,
+    })
     if (res.ok) {
       const { path } = await res.json()
       onChange({ ...block, videoSrc: path })

@@ -17,9 +17,10 @@ export default function ImageUploader({ value, onChange, label = 'Cover Image' }
   const handleFile = async (file: File) => {
     setUploading(true)
     setError(null)
-    const fd = new FormData()
-    fd.append('file', file)
-    const res = await fetch('/api/upload', { method: 'POST', body: fd })
+    const res = await fetch(`/api/upload?filename=${encodeURIComponent(file.name)}`, {
+      method: 'POST',
+      body: file,
+    })
     if (res.ok) {
       const { path } = await res.json()
       onChange(path)
