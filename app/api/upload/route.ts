@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
 
     try {
       const blob = await put(filename, file, {
-        access: 'public',
+        access: 'private',
       })
 
       return NextResponse.json({ path: blob.url })
