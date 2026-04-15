@@ -47,9 +47,13 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       return NextResponse.json({ error: 'Empty request body' }, { status: 400 })
     }
 
+    const token = process.env.BLOB_READ_WRITE_TOKEN
+    console.log('[upload] token prefix:', token ? token.slice(0, 30) : 'MISSING')
+
     const blob = await put(filename, bodyBuffer, {
       access: 'public',
       contentType: mimeType || undefined,
+      token,
     })
 
     return NextResponse.json({ path: blob.url })
