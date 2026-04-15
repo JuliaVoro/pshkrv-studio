@@ -21,7 +21,6 @@ export default function Studio({ studio }: { studio: StudioInfo }) {
           <span className="font-mono text-xs tracking-[0.2em] uppercase text-muted">
             Studio
           </span>
-          <span className="h-px flex-1 bg-border" />
         </motion.div>
 
         <div className="grid md:grid-cols-12 gap-12 lg:gap-20">

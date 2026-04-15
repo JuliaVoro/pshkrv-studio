@@ -25,7 +25,6 @@ export default function Approach({ studio }: { studio: StudioInfo }) {
           <span className="font-mono text-xs tracking-[0.2em] uppercase text-dark-muted">
             Approach
           </span>
-          <span className="h-px flex-1 bg-dark-border" />
         </motion.div>
 
         {/* Principles */}

@@ -16,35 +16,18 @@
       "Signage",
       "Environmental Design"
     ],
-    "coverImage": "/uploads/4865c3e2-874b-473f-aa70-8d2e8b36b637.png",
+    "coverImage": "https://zfpxms7mp2b7dnct.public.blob.vercel-storage.com/Screenshot%202026-04-16%20at%2000.07.21.png",
     "coverColor": "#202021",
     "images": [],
     "featured": true,
     "order": 1,
     "blocks": [
       {
-        "type": "color-full",
-        "bgColor": "#202021",
-        "textColor": "#FF4F00",
-        "label": "BUDE+"
-      },
-      {
-        "type": "image-full",
-        "image": {
-          "src": "/uploads/5374d6dd-3bd1-46ce-943d-23dba2be173d.png",
-          "alt": "Bude branded showroom interior — element grid on wall, orange accent lighting, logo signage",
-          "placeholder": "#1C1E21",
-          "caption": "Showroom, Tbilisi — environmental design"
-        }
-      },
-      {
-        "type": "image-full",
-        "image": {
-          "src": "/uploads/a019c7d6-ac51-49db-8e02-ef133f2338c3.png",
-          "alt": "Bude showroom building facade — white tiled exterior with BUDE logomark and tagline 'Ecosystem of Comfort & Innovation'",
-          "placeholder": "#F8F7F2",
-          "caption": "Showroom facade — Tbilisi, 2024"
-        }
+        "type": "video",
+        "videoSrc": "uploads/video.mp4",
+        "videoCaption": "",
+        "videoAutoplay": true,
+        "videoPoster": "uploads/a019c7d6-ac51-49db-8e02-ef133f2338c3.png"
       },
       {
         "type": "text",
@@ -58,6 +41,15 @@
           "alt": "Bude brand icon — stylised window with flowers and cat, orange on dark background",
           "placeholder": "#202021",
           "caption": "The nest — home as a place of warmth, life, and comfort"
+        }
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/5374d6dd-3bd1-46ce-943d-23dba2be173d.png",
+          "alt": "Bude branded showroom interior — element grid on wall, orange accent lighting, logo signage",
+          "placeholder": "#1C1E21",
+          "caption": "Showroom, Tbilisi — environmental design"
         }
       },
       {
@@ -192,7 +184,7 @@
       {
         "type": "image-full",
         "image": {
-          "src": "/uploads/ece2eeb6-d20b-4334-b268-1ad7f252bdff.png",
+          "src": "https://zfpxms7mp2b7dnct.public.blob.vercel-storage.com/Screenshot%202026-04-16%20at%2000.07.47.png",
           "alt": "Mr. Serious and Mr. Fun brand personality spread — two character faces with attribute lists on amber background",
           "placeholder": "#FFB81C",
           "caption": "Brand personality — Mr. Serious and Mr. Fun"
@@ -210,7 +202,7 @@
       {
         "type": "image-full",
         "image": {
-          "src": "/uploads/657bef75-f4dd-4aa3-b15e-a81364b3a4a6.png",
+          "src": "https://zfpxms7mp2b7dnct.public.blob.vercel-storage.com/Screenshot%202026-04-16%20at%2000.07.09.png",
           "alt": "Bude retail store exterior — dark facade with Georgian script BUDE+ sign above entrance, element grid in window",
           "placeholder": "#202021",
           "caption": "Retail store — Georgian-script signage and window graphics"
@@ -233,13 +225,6 @@
           "caption": "",
           "placeholder": "#E4E4E7"
         }
-      },
-      {
-        "type": "video",
-        "videoSrc": "uploads/video.mp4",
-        "videoCaption": "",
-        "videoAutoplay": true,
-        "videoPoster": "uploads/a019c7d6-ac51-49db-8e02-ef133f2338c3.png"
       }
     ]
   },

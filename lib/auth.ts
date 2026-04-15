@@ -1,5 +1,5 @@
 import { SignJWT, jwtVerify } from 'jose'
-import bcrypt from 'bcryptjs'
+
 import type { SessionPayload } from '@/types'
 
 const secret = new TextEncoder().encode(
@@ -7,9 +7,9 @@ const secret = new TextEncoder().encode(
 )
 
 export async function verifyPassword(plain: string): Promise<boolean> {
-  const hash = process.env.ADMIN_PASSWORD_HASH
-  if (!hash) return false
-  return bcrypt.compare(plain, hash)
+  const password = process.env.ADMIN_PASSWORD
+  if (!password) return false
+  return plain === password
 }
 
 export async function createToken(payload: Omit<SessionPayload, 'iat' | 'exp'>): Promise<string> {

@@ -24,12 +24,6 @@ export default function Services({ services }: { services: Service[] }) {
           >
             Services
           </motion.span>
-          <motion.span
-            initial={{ scaleX: 0 }}
-            animate={inView ? { scaleX: 1 } : {}}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden md:block h-px flex-1 mx-8 bg-border origin-left"
-          />
         </div>
 
         {/* Accordion list */}
