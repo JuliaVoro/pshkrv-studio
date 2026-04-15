@@ -10,6 +10,22 @@ const ALLOWED_TYPES = [...IMAGE_TYPES, ...VIDEO_TYPES]
 const IMAGE_MAX = 10  * 1024 * 1024  // 10 MB
 const VIDEO_MAX = 300 * 1024 * 1024  // 300 MB
 
+// GET /api/upload — config diagnostic (admin-only, safe to call from browser)
+export async function GET() {
+  const token =
+    process.env.BLOB_READ_WRITE_TOKEN ??
+    process.env.pshkrv_READ_WRITE_TOKEN
+
+  return NextResponse.json({
+    blobTokenConfigured: Boolean(token),
+    tokenSource: process.env.BLOB_READ_WRITE_TOKEN
+      ? 'BLOB_READ_WRITE_TOKEN'
+      : process.env.pshkrv_READ_WRITE_TOKEN
+      ? 'pshkrv_READ_WRITE_TOKEN (legacy)'
+      : 'MISSING — add BLOB_READ_WRITE_TOKEN in Vercel → Project Settings → Environment Variables',
+  })
+}
+
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData()
@@ -38,16 +54,16 @@ export async function POST(req: NextRequest) {
     const ext = extname(file.name) || (isVideo ? '.mp4' : '.jpg')
     const filename = `${randomUUID()}${ext}`
 
-    // @vercel/blob automatically reads BLOB_READ_WRITE_TOKEN from the environment.
-    // We also support the legacy custom name pshkrv_READ_WRITE_TOKEN as a fallback.
+    // @vercel/blob reads BLOB_READ_WRITE_TOKEN automatically.
+    // We pass it explicitly so we can fall back to the legacy variable name.
     const token =
       process.env.BLOB_READ_WRITE_TOKEN ??
       process.env.pshkrv_READ_WRITE_TOKEN
 
     if (!token) {
-      console.error('No Blob token found. Set BLOB_READ_WRITE_TOKEN in Vercel environment variables.')
+      console.error('[upload] BLOB_READ_WRITE_TOKEN not set')
       return NextResponse.json(
-        { error: 'Server configuration error: Blob storage token not configured.' },
+        { error: 'Blob token missing. Add BLOB_READ_WRITE_TOKEN in Vercel → Project Settings → Environment Variables.' },
         { status: 500 }
       )
     }
@@ -55,8 +71,8 @@ export async function POST(req: NextRequest) {
     const blob = await put(filename, file, { access: 'public', token })
     return NextResponse.json({ path: blob.url })
   } catch (error) {
-    const msg = error instanceof Error ? error.message : 'Unknown error'
-    console.error('Upload error:', msg)
-    return NextResponse.json({ error: `Upload failed: ${msg}` }, { status: 500 })
+    const msg = error instanceof Error ? error.message : String(error)
+    console.error('[upload] Blob error:', msg)
+    return NextResponse.json({ error: msg }, { status: 500 })
   }
 }
