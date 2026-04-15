@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { writeFileSync, mkdirSync } from 'fs'
-import { join, extname } from 'path'
+import { put } from '@vercel/blob'
+import { extname } from 'path'
 import { randomUUID } from 'crypto'
 
 const IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/avif']
@@ -30,12 +30,15 @@ export async function POST(req: NextRequest) {
 
   const ext = extname(file.name) || '.jpg'
   const filename = `${randomUUID()}${ext}`
-  const uploadsDir = join(process.cwd(), 'public', 'uploads')
 
-  mkdirSync(uploadsDir, { recursive: true })
+  try {
+    const blob = await put(filename, file, {
+      access: 'public',
+    })
 
-  const buffer = Buffer.from(await file.arrayBuffer())
-  writeFileSync(join(uploadsDir, filename), buffer)
-
-  return NextResponse.json({ path: `/uploads/${filename}` })
+    return NextResponse.json({ path: blob.url })
+  } catch (error) {
+    console.error('Upload error:', error)
+    return NextResponse.json({ error: 'Upload failed' }, { status: 500 })
+  }
 }
