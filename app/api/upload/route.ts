@@ -9,16 +9,15 @@ const VIDEO_TYPES = new Set(['video/mp4', 'video/webm', 'video/ogg', 'video/quic
 
 // GET /api/upload — config diagnostic
 export async function GET() {
-  const configured = Boolean(
-    process.env.BLOB_READ_WRITE_TOKEN ?? process.env.pshkrv_READ_WRITE_TOKEN
-  )
+  const token = process.env.BLOB_READ_WRITE_TOKEN ?? process.env.pshkrv_READ_WRITE_TOKEN
   return NextResponse.json({
-    blobTokenConfigured: configured,
+    blobTokenConfigured: Boolean(token),
+    tokenPreview: token ? `${token.slice(0, 20)}...${token.slice(-6)}` : 'MISSING',
     tokenSource: process.env.BLOB_READ_WRITE_TOKEN
       ? 'BLOB_READ_WRITE_TOKEN'
       : process.env.pshkrv_READ_WRITE_TOKEN
       ? 'pshkrv_READ_WRITE_TOKEN (legacy)'
-      : 'MISSING — add BLOB_READ_WRITE_TOKEN in Vercel → Project Settings → Environment Variables',
+      : 'MISSING',
   })
 }
 
