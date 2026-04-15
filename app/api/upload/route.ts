@@ -23,7 +23,8 @@ export async function GET() {
 // Body: raw file bytes (Content-Type set by browser automatically)
 export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
-    const filename = request.nextUrl.searchParams.get('filename')
+    const { searchParams } = new URL(request.url)
+    const filename = searchParams.get('filename')
     if (!filename) {
       return NextResponse.json({ error: 'Missing ?filename= query param' }, { status: 400 })
     }
