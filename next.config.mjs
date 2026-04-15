@@ -6,6 +6,11 @@ const nextConfig = {
       { pathname: '/uploads/**' },
     ],
   },
+  api: {
+    bodyParser: {
+      sizeLimit: '500mb',
+    },
+  },
   experimental: {
     serverComponentsExternalPackages: ['bcryptjs'],
   },
