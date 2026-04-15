@@ -1,0 +1,51 @@
+{
+  "tagline": "Art Direction & Digital Design",
+  "about": [
+    "PSHKRV Studio is a Milan-based design practice founded by Sergii Pushkarov. We work at the intersection of art direction, brand identity, and digital design.",
+    "We partner with cultural institutions, independent brands, and ambitious founders to create visual systems that endure — built on rigor, not trend."
+  ],
+  "approach": [
+    {
+      "title": "Concept before execution",
+      "body": "Every project begins with a clear point of view. We invest in thinking before making — because design without concept is just decoration."
+    },
+    {
+      "title": "Constraint as creative force",
+      "body": "Limitations produce clarity. We work within briefs, budgets, and timelines as creative constraints, not obstacles."
+    },
+    {
+      "title": "Craft at every scale",
+      "body": "From a business card to a 200-page catalogue, the same level of typographic care and visual precision applies."
+    }
+  ],
+  "expertise": [
+    "Art Direction",
+    "Brand Identity",
+    "Typography",
+    "Editorial Design",
+    "Digital Interfaces",
+    "Motion Design",
+    "Print Production",
+    "Packaging",
+    "Visual Systems",
+    "Creative Strategy"
+  ],
+  "clients": [
+    "Forma Collective",
+    "Nero Magazine",
+    "Associazione Brera",
+    "Studio Oleandro",
+    "Futura",
+    "Archivio Tipo"
+  ],
+  "collaborators": [
+    "Various photographers",
+    "Copywriters",
+    "Front-end developers",
+    "Print producers"
+  ],
+  "email": "sergii@pshkrv.com",
+  "linkedin": "https://www.linkedin.com/in/pshkrv/",
+  "headerStyle": "animated",
+  "heroStyle": "animated"
+}

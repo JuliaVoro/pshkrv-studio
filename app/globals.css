@@ -3,25 +3,112 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #FAFAFA;
+  --color-fg: #09090B;
+  --color-muted: #71717A;
+  --color-border: #E4E4E7;
+  --color-accent: #D4A853;
+  --color-accent-dark: #B8923F;
+  --color-dark-bg: #0C0C0D;
+  --color-dark-fg: #F4F4F5;
+  --color-dark-muted: #A1A1AA;
+  --color-dark-border: #27272A;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-muted);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-fg);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Line mask for text reveal animations */
+  .line-mask {
+    overflow: hidden;
+    display: block;
+  }
+
+  /* Dark section theme */
+  [data-theme="dark"] {
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-fg);
+  }
+
+  /* Grid rule lines (editorial) */
+  .rule-x {
+    border-top: 1px solid var(--color-border);
+  }
+
+  [data-theme="dark"] .rule-x {
+    border-top-color: var(--color-dark-border);
+  }
+
+  /* Cursor follower */
+  #cursor-follower {
+    pointer-events: none;
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-fg);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+    mix-blend-mode: difference;
+  }
+
+  #cursor-follower.expanded {
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid var(--color-bg);
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* Prevent animation for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

@@ -1,4 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [],
+    localPatterns: [
+      { pathname: '/uploads/**' },
+    ],
+  },
+  experimental: {
+    serverComponentsExternalPackages: ['bcryptjs'],
+  },
+}
 
-export default nextConfig;
+export default nextConfig

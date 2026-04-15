@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "title": "Brand Identity",
+    "description": "Strategic visual identity systems built for longevity. From logotype to full brand language — every mark designed with intention.",
+    "deliverables": ["Logo & logotype system", "Typography guidelines", "Color system", "Brand guidelines", "Stationery & templates"],
+    "order": 1
+  },
+  {
+    "id": "2",
+    "title": "Art Direction",
+    "description": "Creative leadership for campaigns, publications, and editorial projects. Concept-to-execution oversight across all visual touchpoints.",
+    "deliverables": ["Creative concept", "Visual narrative", "Photography direction", "Campaign design", "Production supervision"],
+    "order": 2
+  },
+  {
+    "id": "3",
+    "title": "Digital Design",
+    "description": "Interface design and digital experiences that balance aesthetic precision with functional clarity. No decoration without purpose.",
+    "deliverables": ["UI / UX design", "Design systems", "Prototyping", "Motion guidelines", "Developer handoff"],
+    "order": 3
+  },
+  {
+    "id": "4",
+    "title": "Editorial & Print",
+    "description": "Books, catalogues, magazines, and printed matter. Typographic authority and material consideration at every scale.",
+    "deliverables": ["Layout design", "Typography system", "Print production", "Packaging design", "Signage & wayfinding"],
+    "order": 4
+  }
+]

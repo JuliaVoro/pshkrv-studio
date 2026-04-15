@@ -1,0 +1,367 @@
+[
+  {
+    "id": "7",
+    "title": "Bude",
+    "slug": "bude-branding",
+    "category": "Brand Identity",
+    "year": 2024,
+    "client": "Termo Industria",
+    "tagline": "From industrial supplier to ecosystem of comfort and innovation",
+    "description": "A comprehensive brand identity redesign transforming Thermoindustria into BUDE — a modern home comfort company built around four natural elements: fire, water, air, and earth. New name, new mark, new language system across Georgian and Latin scripts.",
+    "role": "Brand Strategy, Visual Identity, Environmental Design",
+    "duration": "4 months — 2024",
+    "tags": [
+      "Brand Identity",
+      "Typography",
+      "Signage",
+      "Environmental Design"
+    ],
+    "coverImage": "/uploads/4865c3e2-874b-473f-aa70-8d2e8b36b637.png",
+    "coverColor": "#202021",
+    "images": [],
+    "featured": true,
+    "order": 1,
+    "blocks": [
+      {
+        "type": "color-full",
+        "bgColor": "#202021",
+        "textColor": "#FF4F00",
+        "label": "BUDE+"
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/5374d6dd-3bd1-46ce-943d-23dba2be173d.png",
+          "alt": "Bude branded showroom interior — element grid on wall, orange accent lighting, logo signage",
+          "placeholder": "#1C1E21",
+          "caption": "Showroom, Tbilisi — environmental design"
+        }
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/a019c7d6-ac51-49db-8e02-ef133f2338c3.png",
+          "alt": "Bude showroom building facade — white tiled exterior with BUDE logomark and tagline 'Ecosystem of Comfort & Innovation'",
+          "placeholder": "#F8F7F2",
+          "caption": "Showroom facade — Tbilisi, 2024"
+        }
+      },
+      {
+        "type": "text",
+        "heading": "The Brief",
+        "body": "Thermoindustria needed a complete transformation — from a regional HVAC supplier to a recognisable consumer brand capable of competing in the modern home comfort market.\n\nThe brief called for a new name, a new identity, and a flexible design system that could work across two writing systems and speak to two very different audiences: technical professionals who specify products, and families who buy them."
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/912cbd37-4851-42e4-a577-18e90a937d2c.png",
+          "alt": "Bude brand icon — stylised window with flowers and cat, orange on dark background",
+          "placeholder": "#202021",
+          "caption": "The nest — home as a place of warmth, life, and comfort"
+        }
+      },
+      {
+        "type": "text",
+        "heading": "BUDE (ბუდე)",
+        "body": "The name means \"nest\" in Georgian — a universal metaphor for home in its most intimate sense. A four-letter word with no negative connotations in any major language, easy to pronounce, and deeply rooted in local culture.\n\nThe \"+\" suffix represents the brand's core promise: nature's four elements, plus human engineering. Fire, Water, Air, and Earth map directly onto the product range — heating, plumbing, ventilation, insulation."
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/00a361bf-7ba7-4e5b-bfc7-85a13490ce0e.png",
+          "alt": "Bude logo system sheet — multiple lockups across colours and both Latin and Georgian scripts",
+          "placeholder": "#F8F7F2",
+          "caption": "Logo system — Latin and Georgian lockups in primary, reversed, and app icon formats"
+        }
+      },
+      {
+        "type": "text",
+        "heading": "Type System",
+        "body": "Two typefaces carry the identity in parallel. Neue Frutiger World handles Latin-script communication — a humanist grotesque with warmth and precision, selected for its extensive language support.\n\nFor Georgian, ALK Life provides the Mkhedruli companion — matched in optical weight and spacing rhythm so that neither script feels subordinate. Both typefaces were treated as equals from the first layout."
+      },
+      {
+        "type": "image-2col",
+        "images": [
+          {
+            "src": "/uploads/4fc21414-b3f7-4912-91a1-116389ee08a6.png",
+            "alt": "Neue Frutiger World typeface specimen — Latin character set displayed on orange organic shape",
+            "placeholder": "#F8F7F2",
+            "caption": "Neue Frutiger World — Latin"
+          },
+          {
+            "src": "/uploads/d15b5434-3b7a-4c4b-87cb-158ea1143ce3.png",
+            "alt": "ALK Life typeface specimen — Georgian Mkhedruli character set on orange organic shape",
+            "placeholder": "#F8F7F2",
+            "caption": "ALK Life — Georgian"
+          }
+        ]
+      },
+      {
+        "type": "palette",
+        "colors": [
+          {
+            "hex": "#ff4f00",
+            "name": "Espresso",
+            "dark": true
+          },
+          {
+            "hex": "#202021",
+            "name": "Barolo",
+            "dark": true
+          },
+          {
+            "hex": "#f8f7f2",
+            "name": "Crema",
+            "dark": false
+          },
+          {
+            "hex": "#ffb81c",
+            "name": "Amber",
+            "dark": false
+          },
+          {
+            "hex": "#b2d3c2",
+            "name": "Sage",
+            "dark": false
+          },
+          {
+            "hex": "#3c826d",
+            "name": "Pine",
+            "dark": true
+          },
+          {
+            "hex": "#e6e6df",
+            "name": "Stone",
+            "dark": false
+          },
+          {
+            "hex": "#4f00ff",
+            "name": "Iris",
+            "dark": true
+          },
+          {
+            "hex": "#eeb49b",
+            "name": "Blush",
+            "dark": false
+          },
+          {
+            "hex": "#c72da1",
+            "name": "Fuchsia",
+            "dark": true
+          },
+          {
+            "hex": "#24bbf1",
+            "name": "Aqua",
+            "dark": false
+          },
+          {
+            "hex": "#53ee1b",
+            "name": "Lime",
+            "dark": false
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "heading": "Symbol Language",
+        "body": "Four element glyphs — fire, water, air, earth — form the atomic unit of the visual system. Arranged in a 2×2 grid with the \"+\" crosshair, they produce the primary logomark.\n\nDeployed at scale, the symbols become a living pattern: a generative field of marks that fills surfaces, packaging, and environmental graphics. Dense or sparse, coloured or monochrome, the system adapts to any context without losing recognition."
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/081d6c92-fbd5-4f50-a09a-724ccd5aa1c8.png",
+          "alt": "Bude element symbols scattered across cream background with organic amber and orange blob shapes",
+          "placeholder": "#F8F7F2",
+          "caption": "Symbol field — element marks in organic composition"
+        }
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/42965ed4-cea8-4aff-a5d0-49fd62a6ee4e.png",
+          "alt": "Dense grid of Bude element symbols across the full brand palette with golden connecting lines",
+          "placeholder": "#F8F7F2",
+          "caption": "Extended palette — element symbols across all brand colours"
+        }
+      },
+      {
+        "type": "text",
+        "heading": "Mr. Serious & Mr. Fun",
+        "body": "BUDE speaks in two voices. Mr. Serious is factual and expert — confident with architects, engineers, and specifiers. Mr. Fun is warm and witty — approachable with homeowners and families.\n\nThe same identity flexes between both registers without contradiction. The grid and the organic blob. The monochrome and the full colour. Serious and fun are not opposites — they are two moods of the same nest."
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/ece2eeb6-d20b-4334-b268-1ad7f252bdff.png",
+          "alt": "Mr. Serious and Mr. Fun brand personality spread — two character faces with attribute lists on amber background",
+          "placeholder": "#FFB81C",
+          "caption": "Brand personality — Mr. Serious and Mr. Fun"
+        }
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/4aa2e1ad-f977-4fae-aa47-527b56fffcbd.png",
+          "alt": "Abstract BUDE character face built from element symbols — 'In its presence Bude swings from Mr. Serious to Mr. Fun'",
+          "placeholder": "#F8F7F2",
+          "caption": "Character illustration — element symbols composing a human face"
+        }
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/657bef75-f4dd-4aa3-b15e-a81364b3a4a6.png",
+          "alt": "Bude retail store exterior — dark facade with Georgian script BUDE+ sign above entrance, element grid in window",
+          "placeholder": "#202021",
+          "caption": "Retail store — Georgian-script signage and window graphics"
+        }
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/51ebfb18-d998-4d0e-a865-2b07db6dd9f3.png",
+          "alt": "Bude branded stationery spread — housewarming gift card with grid pattern, orange blob graphic, handwritten note",
+          "placeholder": "#F8F7F2",
+          "caption": "Stationery — branded gift card and collateral"
+        }
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/346859af-4b9a-4613-8715-43a6c6681f88.png",
+          "alt": "",
+          "caption": "",
+          "placeholder": "#E4E4E7"
+        }
+      },
+      {
+        "type": "video",
+        "videoSrc": "uploads/video.mp4",
+        "videoCaption": "",
+        "videoAutoplay": true,
+        "videoPoster": "uploads/a019c7d6-ac51-49db-8e02-ef133f2338c3.png"
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "title": "Gra v dovgy",
+    "slug": "forma-collective",
+    "category": "Brand Identity",
+    "year": 2024,
+    "client": "Forma Collective",
+    "tagline": "Visual identity for a Milan-based architecture collective",
+    "description": "Complete brand identity for a Milan-based architecture collective. Visual language built around geometric precision and material honesty. The system is designed to scale across print, digital, and environmental applications.",
+    "role": "Brand Identity, Visual System, Typography",
+    "duration": "3 months — 2024",
+    "tags": [
+      "Brand Identity",
+      "Typography",
+      "Visual System"
+    ],
+    "coverImage": "/uploads/f194a8b5-5e4f-469d-81a3-6d01c7269bb7.png",
+    "coverColor": "#E8E4DF",
+    "images": [],
+    "featured": true,
+    "order": 2,
+    "blocks": [
+      {
+        "type": "color-full",
+        "bgColor": "#E8E4DF",
+        "textColor": "#09090B",
+        "label": "FORMA"
+      },
+      {
+        "type": "text",
+        "heading": "Precision as identity",
+        "body": "Forma Collective is a group of five architects working across residential, cultural, and public space. They came to us needing an identity that could represent collective authorship without flattening individual voices.\n\nThe solution is a modular logotype system built on a strict geometric grid — each arrangement of the F-O-R-M-A letterforms produces a distinct but related mark. One identity, five configurations."
+      },
+      {
+        "type": "image-2col",
+        "images": [
+          {
+            "src": "",
+            "alt": "Forma logotype on white",
+            "placeholder": "#F5F3F0"
+          },
+          {
+            "src": "",
+            "alt": "Forma logotype on concrete",
+            "placeholder": "#9B9590"
+          }
+        ]
+      },
+      {
+        "type": "palette",
+        "colors": [
+          {
+            "hex": "#E8E4DF",
+            "name": "Warm White"
+          },
+          {
+            "hex": "#09090B",
+            "name": "Ink Black",
+            "dark": true
+          },
+          {
+            "hex": "#9B9590",
+            "name": "Concrete"
+          },
+          {
+            "hex": "#4A4540",
+            "name": "Graphite",
+            "dark": true
+          }
+        ]
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "",
+          "alt": "Forma brand applications",
+          "placeholder": "#E8E4DF",
+          "caption": "Identity in use — stationery, publication covers, and environmental signage"
+        }
+      },
+      {
+        "type": "text",
+        "heading": "Materials and making",
+        "body": "All print applications use uncoated stock and blind emboss for primary identity elements. The restraint of the material palette — white, black, concrete — mirrors the studio's architectural philosophy.\n\nDigital applications use the same grid discipline: consistent baseline grid, no decorative elements, information hierarchy through scale and weight alone."
+      },
+      {
+        "type": "image-3col",
+        "images": [
+          {
+            "src": "",
+            "alt": "Forma business card",
+            "placeholder": "#E8E4DF"
+          },
+          {
+            "src": "",
+            "alt": "Forma publication cover",
+            "placeholder": "#09090B"
+          },
+          {
+            "src": "",
+            "alt": "Forma signage detail",
+            "placeholder": "#9B9590"
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "quote": "We needed something that felt like our work — not decorative, not obvious. PSHKRV got it immediately.",
+        "attribution": "Elena Rossi, Partner"
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "",
+          "alt": "Forma full brand system",
+          "placeholder": "#F5F3F0",
+          "caption": "Complete brand system overview"
+        }
+      }
+    ]
+  }
+]
