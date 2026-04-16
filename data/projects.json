@@ -230,121 +230,209 @@
   },
   {
     "id": "1",
-    "title": "Gra v dovgy",
-    "slug": "forma-collective",
+    "title": "Gra v Dovgy",
+    "slug": "gra-v-dovgy",
     "category": "Brand Identity",
-    "year": 2024,
-    "client": "Forma Collective",
-    "tagline": "Visual identity for a Milan-based architecture collective",
-    "description": "Complete brand identity for a Milan-based architecture collective. Visual language built around geometric precision and material honesty. The system is designed to scale across print, digital, and environmental applications.",
-    "role": "Brand Identity, Visual System, Typography",
-    "duration": "3 months — 2024",
+    "year": 2026,
+    "client": "Gra v Dovgy",
+    "tagline": "101 вхід до теми бізнесу. Завжди розраховуй на себе",
+    "description": "Complete brand identity for a Ukrainian business education platform built on one principle — always count on yourself. A pixel-native visual system using an ant as its symbol of relentless, collective effort. The identity spans digital, print, and merchandise with Electric Green as its defining accent.",
+    "role": "Brand Strategy, Visual Identity, Typography System",
+    "duration": "2026",
     "tags": [
       "Brand Identity",
       "Typography",
-      "Visual System"
+      "Visual System",
+      "Digital"
     ],
-    "coverImage": "/uploads/f194a8b5-5e4f-469d-81a3-6d01c7269bb7.png",
-    "coverColor": "#E8E4DF",
+    "coverImage": "",
+    "coverColor": "#1D1C1A",
     "images": [],
     "featured": true,
     "order": 2,
     "blocks": [
       {
         "type": "color-full",
-        "bgColor": "#E8E4DF",
-        "textColor": "#09090B",
-        "label": "FORMA"
+        "bgColor": "#E7FF53",
+        "textColor": "#1D1C1A",
+        "label": "ГРА В ДОВГУ"
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "",
+          "alt": "Gra v Dovgy — main logo spread, pixel ant symbol and wordmark on white background",
+          "placeholder": "#F4F5F3",
+          "caption": "Фірмовий знак — pixel logotype and ant symbol"
+        }
       },
       {
         "type": "text",
-        "heading": "Precision as identity",
-        "body": "Forma Collective is a group of five architects working across residential, cultural, and public space. They came to us needing an identity that could represent collective authorship without flattening individual voices.\n\nThe solution is a modular logotype system built on a strict geometric grid — each arrangement of the F-O-R-M-A letterforms produces a distinct but related mark. One identity, five configurations."
+        "heading": "The Brief",
+        "body": "Gra v Dovgy — \"Play for the Long Game\" — is a Ukrainian business education platform with one founding principle: always count on yourself. The brand needed to feel built from scratch, not borrowed from a trend.\n\nThe brief was direct: a visual identity for 2026 that reads as native to digital, works across all surfaces, and carries the energy of independent thinking without corporate polish."
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "",
+          "alt": "Gra v Dovgy brand mark — pixel ant symbol standalone on dark background",
+          "placeholder": "#1D1C1A",
+          "caption": "Символ — the ant, rendered in pixel grid"
+        }
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "",
+          "alt": "Gra v Dovgy adaptive logo variants — light and dark background versions across four formats",
+          "placeholder": "#F4F5F3",
+          "caption": "Адаптивні варіанти фірмового знаку — light and dark applications"
+        }
+      },
+      {
+        "type": "text",
+        "heading": "The Ant",
+        "body": "The brand symbol is an ant — drawn on a pixel grid, precise and undecorated. The ant builds relentlessly, carries more than its weight, and operates as part of a larger system while remaining fully autonomous.\n\nThis is the exact model the platform teaches: individual discipline, long-term compounding, no shortcuts. The pixel construction method echoes the platform's digital-first nature and the idea of building something one block at a time."
+      },
+      {
+        "type": "palette",
+        "colors": [
+          {
+            "hex": "#1D1C1A",
+            "name": "Pastel Black",
+            "dark": true
+          },
+          {
+            "hex": "#F4F5F3",
+            "name": "White Smoke",
+            "dark": false
+          },
+          {
+            "hex": "#E7FF53",
+            "name": "Electric Green",
+            "dark": false
+          },
+          {
+            "hex": "#A4A8AA",
+            "name": "Midnight Silver",
+            "dark": false
+          },
+          {
+            "hex": "#000000",
+            "name": "Black",
+            "dark": true
+          },
+          {
+            "hex": "#FFFFFF",
+            "name": "White",
+            "dark": false
+          },
+          {
+            "hex": "#6542FF",
+            "name": "Meteor Shower",
+            "dark": true
+          },
+          {
+            "hex": "#FF2E9B",
+            "name": "Bright Magenta",
+            "dark": true
+          },
+          {
+            "hex": "#D9D9D9",
+            "name": "Light Silver",
+            "dark": false
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "heading": "Colour System",
+        "body": "The palette is built in two tiers. Four primary colours anchor the identity: Pastel Black and White Smoke form the neutral core; Electric Green (#E7FF53) is the signal colour — high-contrast, impossible to miss; Midnight Silver provides the mid-range.\n\nFive additional colours expand the system for digital contexts — Meteor Shower and Bright Magenta handle accent moments in UI and content, while Light Silver fills structural roles. Electric Green is used sparingly: when it appears, it means something."
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "",
+          "alt": "Gra v Dovgy typography specimen — Sevenet 7 Cyr pixel display font on Electric Green background",
+          "placeholder": "#E7FF53",
+          "caption": "Sevenet 7 Cyr — primary display typeface"
+        }
+      },
+      {
+        "type": "text",
+        "heading": "Type System",
+        "body": "The primary typeface is Sevenet 7 Cyr — a pixel bitmap display font with full Cyrillic support. It makes the Ukrainian language native to the digital grid, not an afterthought. Headlines and large type are always set in Sevenet 7.\n\nOverpass Mono handles body text across all weights — Light through Bold. Its monospaced character gives the brand a structured, code-adjacent voice. Two additional display fonts, Tiny5 and Digital Pixel, extend the pixel language for specific executions."
       },
       {
         "type": "image-2col",
         "images": [
           {
             "src": "",
-            "alt": "Forma logotype on white",
-            "placeholder": "#F5F3F0"
+            "alt": "Sevenet 7 Cyr full character set — Latin and Cyrillic on Electric Green",
+            "placeholder": "#E7FF53",
+            "caption": "Sevenet 7 Cyr — display"
           },
           {
             "src": "",
-            "alt": "Forma logotype on concrete",
-            "placeholder": "#9B9590"
+            "alt": "Overpass Mono type specimen — four weights on white",
+            "placeholder": "#F4F5F3",
+            "caption": "Overpass Mono — body"
           }
         ]
       },
       {
-        "type": "palette",
-        "colors": [
-          {
-            "hex": "#E8E4DF",
-            "name": "Warm White"
-          },
-          {
-            "hex": "#09090B",
-            "name": "Ink Black",
-            "dark": true
-          },
-          {
-            "hex": "#9B9590",
-            "name": "Concrete"
-          },
-          {
-            "hex": "#4A4540",
-            "name": "Graphite",
-            "dark": true
-          }
-        ]
+        "type": "text",
+        "heading": "Pattern System",
+        "body": "The brand pattern is a regular grid of squares — a direct translation of the pixel construction method into surface design. Squares can be read as pixels, as cells in a grid, as individual units in a collective structure.\n\nThe system scales through four configurations: 1×1, 1×2, 1×3, and 3×3. Density varies from full field to sparse scatter. On Electric Green ground, the dark squares create a textile-like quality — structured and bold, readable at any scale from favicon to billboard."
       },
       {
         "type": "image-full",
         "image": {
           "src": "",
-          "alt": "Forma brand applications",
-          "placeholder": "#E8E4DF",
-          "caption": "Identity in use — stationery, publication covers, and environmental signage"
+          "alt": "Gra v Dovgy pattern — full-spread Electric Green field with dark pixel squares in regular grid",
+          "placeholder": "#E7FF53",
+          "caption": "Фірмовий патерн — регулярна решітка з квадратів"
         }
-      },
-      {
-        "type": "text",
-        "heading": "Materials and making",
-        "body": "All print applications use uncoated stock and blind emboss for primary identity elements. The restraint of the material palette — white, black, concrete — mirrors the studio's architectural philosophy.\n\nDigital applications use the same grid discipline: consistent baseline grid, no decorative elements, information hierarchy through scale and weight alone."
       },
       {
         "type": "image-3col",
         "images": [
           {
             "src": "",
-            "alt": "Forma business card",
-            "placeholder": "#E8E4DF"
+            "alt": "1x1 pattern module — single square unit",
+            "placeholder": "#1D1C1A",
+            "caption": "1×1"
           },
           {
             "src": "",
-            "alt": "Forma publication cover",
-            "placeholder": "#09090B"
+            "alt": "1x2 and 1x3 pattern modules",
+            "placeholder": "#F4F5F3",
+            "caption": "1×2 / 1×3"
           },
           {
             "src": "",
-            "alt": "Forma signage detail",
-            "placeholder": "#9B9590"
+            "alt": "3x3 pattern module — full grid block",
+            "placeholder": "#E7FF53",
+            "caption": "3×3"
           }
         ]
-      },
-      {
-        "type": "quote",
-        "quote": "We needed something that felt like our work — not decorative, not obvious. PSHKRV got it immediately.",
-        "attribution": "Elena Rossi, Partner"
       },
       {
         "type": "image-full",
         "image": {
           "src": "",
-          "alt": "Forma full brand system",
-          "placeholder": "#F5F3F0",
-          "caption": "Complete brand system overview"
+          "alt": "Gra v Dovgy favicon and social avatar application — browser tab and Instagram profile display",
+          "placeholder": "#1D1C1A",
+          "caption": "Застосування символу на фавіконі та аватарі"
+        }
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "",
+          "alt": "Gra v Dovgy branded pen — merchandise with logo and Electric Green accent against dark background",
+          "placeholder": "#1D1C1A",
+          "caption": "Branded merchandise — pen with pixel logotype"
         }
       }
     ]
