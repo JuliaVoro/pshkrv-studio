@@ -29,6 +29,7 @@ export default function ProjectForm({ initial, isEdit }: ProjectFormProps) {
     duration: '',
     tags: [],
     coverImage: '',
+    previewImage: '',
     coverColor: '#E4E4E7',
     images: [],
     featured: false,
@@ -163,8 +164,8 @@ export default function ProjectForm({ initial, isEdit }: ProjectFormProps) {
             label="Cover Photo — project page hero"
           />
           <ImageUploader
-            value={(form as any).previewImage ?? ''}
-            onChange={(path) => set('previewImage' as any, path)}
+            value={form.previewImage ?? ''}
+            onChange={(path) => set('previewImage', path)}
             label="Preview Photo/Video — home page card (falls back to cover)"
             acceptVideo
           />
