@@ -260,8 +260,8 @@
       {
         "type": "image-full",
         "image": {
-          "src": "",
-          "alt": "Gra v Dovgy — main logo spread, pixel ant symbol and wordmark on white background",
+          "src": "/uploads/gra-v-dovgy/01-logo-spread.png",
+          "alt": "Gra v Dovgy — main logo spread, pixel ant symbol and wordmark on white and dark backgrounds",
           "placeholder": "#F4F5F3",
           "caption": "Фірмовий знак — pixel logotype and ant symbol"
         }
@@ -274,17 +274,8 @@
       {
         "type": "image-full",
         "image": {
-          "src": "",
-          "alt": "Gra v Dovgy brand mark — pixel ant symbol standalone on dark background",
-          "placeholder": "#1D1C1A",
-          "caption": "Символ — the ant, rendered in pixel grid"
-        }
-      },
-      {
-        "type": "image-full",
-        "image": {
-          "src": "",
-          "alt": "Gra v Dovgy adaptive logo variants — light and dark background versions across four formats",
+          "src": "/uploads/gra-v-dovgy/02-logo-variants.png",
+          "alt": "Gra v Dovgy adaptive logo variants — light and dark background versions across eight formats",
           "placeholder": "#F4F5F3",
           "caption": "Адаптивні варіанти фірмового знаку — light and dark applications"
         }
@@ -293,6 +284,15 @@
         "type": "text",
         "heading": "The Ant",
         "body": "The brand symbol is an ant — drawn on a pixel grid, precise and undecorated. The ant builds relentlessly, carries more than its weight, and operates as part of a larger system while remaining fully autonomous.\n\nThis is the exact model the platform teaches: individual discipline, long-term compounding, no shortcuts. The pixel construction method echoes the platform's digital-first nature and the idea of building something one block at a time."
+      },
+      {
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/gra-v-dovgy/03-palette.png",
+          "alt": "Gra v Dovgy colour palette — Pastel Black, White Smoke, Electric Green, Midnight Silver and five additional colours",
+          "placeholder": "#F4F5F3",
+          "caption": "Colour system — 4 primary + 5 additional"
+        }
       },
       {
         "type": "palette",
@@ -345,17 +345,12 @@
         ]
       },
       {
-        "type": "text",
-        "heading": "Colour System",
-        "body": "The palette is built in two tiers. Four primary colours anchor the identity: Pastel Black and White Smoke form the neutral core; Electric Green (#E7FF53) is the signal colour — high-contrast, impossible to miss; Midnight Silver provides the mid-range.\n\nFive additional colours expand the system for digital contexts — Meteor Shower and Bright Magenta handle accent moments in UI and content, while Light Silver fills structural roles. Electric Green is used sparingly: when it appears, it means something."
-      },
-      {
         "type": "image-full",
         "image": {
-          "src": "",
-          "alt": "Gra v Dovgy typography specimen — Sevenet 7 Cyr pixel display font on Electric Green background",
-          "placeholder": "#E7FF53",
-          "caption": "Sevenet 7 Cyr — primary display typeface"
+          "src": "/uploads/gra-v-dovgy/04-applications.png",
+          "alt": "Gra v Dovgy digital applications — favicon in browser tab, Instagram avatar, and pattern module diagrams",
+          "placeholder": "#1D1C1A",
+          "caption": "Застосування символу на фавіконі та аватарі — digital applications"
         }
       },
       {
@@ -364,21 +359,13 @@
         "body": "The primary typeface is Sevenet 7 Cyr — a pixel bitmap display font with full Cyrillic support. It makes the Ukrainian language native to the digital grid, not an afterthought. Headlines and large type are always set in Sevenet 7.\n\nOverpass Mono handles body text across all weights — Light through Bold. Its monospaced character gives the brand a structured, code-adjacent voice. Two additional display fonts, Tiny5 and Digital Pixel, extend the pixel language for specific executions."
       },
       {
-        "type": "image-2col",
-        "images": [
-          {
-            "src": "",
-            "alt": "Sevenet 7 Cyr full character set — Latin and Cyrillic on Electric Green",
-            "placeholder": "#E7FF53",
-            "caption": "Sevenet 7 Cyr — display"
-          },
-          {
-            "src": "",
-            "alt": "Overpass Mono type specimen — four weights on white",
-            "placeholder": "#F4F5F3",
-            "caption": "Overpass Mono — body"
-          }
-        ]
+        "type": "image-full",
+        "image": {
+          "src": "/uploads/gra-v-dovgy/05-typography.png",
+          "alt": "Gra v Dovgy typography — Sevenet 7 Cyr and Overpass Mono on Electric Green, Tiny5 and Digital Pixel on dark",
+          "placeholder": "#E7FF53",
+          "caption": "Основні та додаткові шрифти — type system"
+        }
       },
       {
         "type": "text",
@@ -388,50 +375,18 @@
       {
         "type": "image-full",
         "image": {
-          "src": "",
-          "alt": "Gra v Dovgy pattern — full-spread Electric Green field with dark pixel squares in regular grid",
+          "src": "/uploads/gra-v-dovgy/06-pattern-spread.png",
+          "alt": "Gra v Dovgy brand pattern — full-spread Electric Green field with dark pixel squares dissolving across the surface",
           "placeholder": "#E7FF53",
           "caption": "Фірмовий патерн — регулярна решітка з квадратів"
         }
       },
       {
-        "type": "image-3col",
-        "images": [
-          {
-            "src": "",
-            "alt": "1x1 pattern module — single square unit",
-            "placeholder": "#1D1C1A",
-            "caption": "1×1"
-          },
-          {
-            "src": "",
-            "alt": "1x2 and 1x3 pattern modules",
-            "placeholder": "#F4F5F3",
-            "caption": "1×2 / 1×3"
-          },
-          {
-            "src": "",
-            "alt": "3x3 pattern module — full grid block",
-            "placeholder": "#E7FF53",
-            "caption": "3×3"
-          }
-        ]
-      },
-      {
         "type": "image-full",
         "image": {
-          "src": "",
-          "alt": "Gra v Dovgy favicon and social avatar application — browser tab and Instagram profile display",
-          "placeholder": "#1D1C1A",
-          "caption": "Застосування символу на фавіконі та аватарі"
-        }
-      },
-      {
-        "type": "image-full",
-        "image": {
-          "src": "",
-          "alt": "Gra v Dovgy branded pen — merchandise with logo and Electric Green accent against dark background",
-          "placeholder": "#1D1C1A",
+          "src": "/uploads/gra-v-dovgy/07-merch.png",
+          "alt": "Gra v Dovgy branded pen — pixel pattern and wordmark on Meteor Shower purple background with Electric Green clip",
+          "placeholder": "#6542FF",
           "caption": "Branded merchandise — pen with pixel logotype"
         }
       }
