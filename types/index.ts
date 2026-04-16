@@ -60,6 +60,8 @@ export interface Project {
   tagline?: string
   tags: string[]
   coverImage: string
+  /** Separate thumbnail for home page grid (falls back to coverImage if not set) */
+  previewImage?: string
   /** Hex bg color for cover placeholder */
   coverColor?: string
   images: string[]

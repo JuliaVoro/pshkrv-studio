@@ -11,7 +11,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, className }: ProjectCardProps) {
-  const hasImage = Boolean(project.coverImage)
+  const cardImage = project.previewImage || project.coverImage
+  const hasImage = Boolean(cardImage)
   const coverBg = project.coverColor ?? '#E4E4E7'
 
   return (
@@ -31,7 +32,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
               className="w-full h-full"
             >
               <Image
-                src={project.coverImage}
+                src={cardImage}
                 alt={project.title}
                 fill
                 className="object-cover"

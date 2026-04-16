@@ -160,7 +160,12 @@ export default function ProjectForm({ initial, isEdit }: ProjectFormProps) {
           <ImageUploader
             value={form.coverImage ?? ''}
             onChange={(path) => set('coverImage', path)}
-            label="Cover Photo (optional)"
+            label="Cover Photo — project page hero"
+          />
+          <ImageUploader
+            value={(form as any).previewImage ?? ''}
+            onChange={(path) => set('previewImage' as any, path)}
+            label="Preview Photo — home page card (falls back to cover)"
           />
           <div className="space-y-3">
             <div>
