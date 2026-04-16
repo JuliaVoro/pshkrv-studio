@@ -245,7 +245,7 @@
       "Visual System",
       "Digital"
     ],
-    "coverImage": "",
+    "coverImage": "https://zfpxms7mp2b7dnct.public.blob.vercel-storage.com/83.png",
     "coverColor": "#1D1C1A",
     "images": [],
     "featured": true,
@@ -390,6 +390,7 @@
           "caption": "Branded merchandise — pen with pixel logotype"
         }
       }
-    ]
+    ],
+    "previewImage": "https://zfpxms7mp2b7dnct.public.blob.vercel-storage.com/ant.mp4"
   }
 ]

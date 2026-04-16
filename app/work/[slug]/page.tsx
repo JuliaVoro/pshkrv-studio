@@ -9,12 +9,12 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const projects = getProjects()
+  const projects = await getProjects()
   return projects.map((p) => ({ slug: p.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const project = getProjectBySlug(params.slug)
+  const project = await getProjectBySlug(params.slug)
   if (!project) return {}
   return {
     title: `${project.title} — PSHKRV Studio`,
@@ -22,11 +22,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function ProjectPage({ params }: Props) {
-  const project = getProjectBySlug(params.slug)
+export default async function ProjectPage({ params }: Props) {
+  const project = await getProjectBySlug(params.slug)
   if (!project) notFound()
 
-  const allProjects = getProjects().filter((p) => p.featured).sort((a, b) => a.order - b.order)
+  const allProjects = (await getProjects()).filter((p) => p.featured).sort((a, b) => a.order - b.order)
   const currentIdx = allProjects.findIndex((p) => p.slug === params.slug)
   const prevProject = currentIdx > 0 ? allProjects[currentIdx - 1] : null
   const nextProject = currentIdx < allProjects.length - 1 ? allProjects[currentIdx + 1] : null

@@ -5,8 +5,8 @@ import DeleteProjectButton from './DeleteProjectButton'
 
 export const dynamic = 'force-dynamic'
 
-export default function AdminProjectsPage() {
-  const projects = getProjects().sort((a, b) => a.order - b.order)
+export default async function AdminProjectsPage() {
+  const projects = (await getProjects()).sort((a, b) => a.order - b.order)
 
   return (
     <AdminLayout>

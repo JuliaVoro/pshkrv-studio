@@ -14,8 +14,8 @@ import { getFeaturedProjects } from '@/lib/data/projects'
 import { getServices } from '@/lib/data/services'
 import { getStudioInfo } from '@/lib/data/studio'
 
-export default function Home() {
-  const projects = getFeaturedProjects()
+export default async function Home() {
+  const projects = await getFeaturedProjects()
   const services = getServices()
   const studio = getStudioInfo()
 

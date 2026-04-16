@@ -5,8 +5,8 @@ import { notFound } from 'next/navigation'
 
 export const dynamic = 'force-dynamic'
 
-export default function EditProjectPage({ params }: { params: { id: string } }) {
-  const project = getProjectById(params.id)
+export default async function EditProjectPage({ params }: { params: { id: string } }) {
+  const project = await getProjectById(params.id)
   if (!project) notFound()
 
   return (
