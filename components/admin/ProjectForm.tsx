@@ -165,7 +165,8 @@ export default function ProjectForm({ initial, isEdit }: ProjectFormProps) {
           <ImageUploader
             value={(form as any).previewImage ?? ''}
             onChange={(path) => set('previewImage' as any, path)}
-            label="Preview Photo — home page card (falls back to cover)"
+            label="Preview Photo/Video — home page card (falls back to cover)"
+            acceptVideo
           />
           <div className="space-y-3">
             <div>

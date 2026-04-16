@@ -7,12 +7,15 @@ interface ImageUploaderProps {
   value: string
   onChange: (path: string) => void
   label?: string
+  acceptVideo?: boolean
 }
 
-export default function ImageUploader({ value, onChange, label = 'Cover Image' }: ImageUploaderProps) {
+export default function ImageUploader({ value, onChange, label = 'Cover Image', acceptVideo = false }: ImageUploaderProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [uploading, setUploading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  const isVideo = value && (value.endsWith('.mp4') || value.endsWith('.webm') || value.includes('video/'))
 
   const handleFile = async (file: File) => {
     setUploading(true)
@@ -48,17 +51,21 @@ export default function ImageUploader({ value, onChange, label = 'Cover Image' }
       >
         {value && !value.includes('placeholder') ? (
           <div className="relative w-full aspect-video">
-            <Image src={value} alt="Preview" fill className="object-cover rounded" />
+            {isVideo ? (
+              <video src={value} className="w-full h-full object-cover rounded" muted autoPlay loop playsInline />
+            ) : (
+              <Image src={value} alt="Preview" fill className="object-cover rounded" />
+            )}
           </div>
         ) : (
           <p className="text-muted text-sm text-center">
-            {uploading ? 'Uploading…' : 'Click or drag to upload image'}
+            {uploading ? 'Uploading…' : acceptVideo ? 'Click or drag to upload image or video' : 'Click or drag to upload image'}
           </p>
         )}
         <input
           ref={inputRef}
           type="file"
-          accept="image/jpeg,image/png,image/webp,image/avif"
+          accept={acceptVideo ? 'image/jpeg,image/png,image/webp,image/avif,video/mp4,video/webm' : 'image/jpeg,image/png,image/webp,image/avif'}
           className="hidden"
           onChange={(e) => {
             const file = e.target.files?.[0]

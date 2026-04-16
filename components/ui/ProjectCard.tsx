@@ -11,33 +11,45 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, className }: ProjectCardProps) {
-  const cardImage = project.previewImage || project.coverImage
-  const hasImage = Boolean(cardImage)
+  const cardMedia = project.previewImage || project.coverImage
+  const hasMedia = Boolean(cardMedia)
+  const isVideo = Boolean(cardMedia && (cardMedia.endsWith('.mp4') || cardMedia.endsWith('.webm')))
   const coverBg = project.coverColor ?? '#E4E4E7'
 
   return (
     <Link href={`/work/${project.slug}`} className="block w-full h-full">
       <motion.article
         className={`group relative overflow-hidden cursor-pointer w-full h-full ${className ?? ''}`}
-        style={{ backgroundColor: hasImage ? undefined : coverBg }}
+        style={{ backgroundColor: hasMedia ? undefined : coverBg }}
         whileHover="hover"
         initial="rest"
       >
         {/* Image or color fill */}
         <div className="relative w-full h-full overflow-hidden">
-          {hasImage ? (
+          {hasMedia ? (
             <motion.div
               variants={{ rest: { scale: 1 }, hover: { scale: 1.04 } }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="w-full h-full"
             >
-              <Image
-                src={cardImage}
-                alt={project.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+              {isVideo ? (
+                <video
+                  src={cardMedia}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <Image
+                  src={cardMedia!}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              )}
             </motion.div>
           ) : (
             <motion.div
