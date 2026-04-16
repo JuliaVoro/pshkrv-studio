@@ -127,12 +127,12 @@ export default function ProjectPageClient({ project, prevProject, nextProject, h
             </motion.div>
 
             {/* Title */}
-            <div className="overflow-hidden mb-8 pb-[0.15em]">
+            <div className="overflow-hidden mb-8 pb-[0.2em]">
               <motion.h1
                 initial={{ y: '110%' }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-                className={`font-display font-bold leading-[0.9] tracking-[-0.03em] ${
+                className={`font-display font-bold leading-none tracking-[-0.03em] pb-[0.15em] ${
                   isDarkHero ? 'text-dark-fg' : 'text-fg'
                 }`}
                 style={{ fontSize: 'clamp(3.5rem, 10vw, 9rem)' }}
