@@ -6,8 +6,13 @@ export default function CursorFollower() {
   const cursorRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    // Only activate on devices with a precise pointer (mouse), not touch/tablet
+    if (!window.matchMedia('(pointer: fine)').matches) return
+
     const el = cursorRef.current
     if (!el) return
+
+    el.style.display = 'block'
 
     let x = 0, y = 0
     let raf: number
@@ -60,7 +65,8 @@ export default function CursorFollower() {
     <div
       ref={cursorRef}
       id="cursor-follower"
-      className="hidden lg:block"
+      className="hidden"
+      style={{ display: 'none' }}
       aria-hidden="true"
     />
   )
