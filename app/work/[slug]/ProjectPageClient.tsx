@@ -127,7 +127,7 @@ export default function ProjectPageClient({ project, prevProject, nextProject, h
             </motion.div>
 
             {/* Title */}
-            <div className="overflow-hidden mb-8">
+            <div className="overflow-hidden mb-8 pb-[0.15em]">
               <motion.h1
                 initial={{ y: '110%' }}
                 animate={{ y: 0 }}
